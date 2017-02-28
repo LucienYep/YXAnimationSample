@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SKd-Y4-Jdt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--chatView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FC2-BB-bCO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sender" id="1Nw-TI-1dI" customClass="SenderTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Nw-TI-1dI" id="viS-Ih-3GL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haha.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="bwB-qH-xH6">
+                                                    <rect key="frame" x="313.5" y="10" width="31.5" height="23.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="bwB-qH-xH6" secondAttribute="height" multiplier="100:75" id="VEw-3P-kyl"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bwB-qH-xH6" firstAttribute="top" secondItem="viS-Ih-3GL" secondAttribute="top" constant="10" id="9Ta-dP-uha"/>
+                                                <constraint firstItem="bwB-qH-xH6" firstAttribute="centerY" secondItem="viS-Ih-3GL" secondAttribute="centerY" id="hTD-My-SKS"/>
+                                                <constraint firstAttribute="bottom" secondItem="bwB-qH-xH6" secondAttribute="bottom" constant="10" id="nPP-2S-x4e"/>
+                                                <constraint firstAttribute="trailing" secondItem="bwB-qH-xH6" secondAttribute="trailing" constant="30" id="svt-Yp-azi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="showingImageView" destination="bwB-qH-xH6" id="kbS-4Y-gH2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="receiver" id="UEF-bO-xy5" customClass="ReceiverTableViewCell">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEF-bO-xy5" id="RVb-Ol-uys">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="haha.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="9AP-I8-xaP">
+                                                    <rect key="frame" x="30" y="10" width="31.5" height="23.5"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="9AP-I8-xaP" secondAttribute="height" multiplier="100:75" id="hYV-Ir-VB0"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="9AP-I8-xaP" secondAttribute="bottom" constant="10" id="DNy-EU-iKt"/>
+                                                <constraint firstItem="9AP-I8-xaP" firstAttribute="leading" secondItem="RVb-Ol-uys" secondAttribute="leading" constant="30" id="hZk-ux-XmC"/>
+                                                <constraint firstItem="9AP-I8-xaP" firstAttribute="top" secondItem="RVb-Ol-uys" secondAttribute="top" constant="10" id="mab-EU-ghw"/>
+                                                <constraint firstItem="9AP-I8-xaP" firstAttribute="centerY" secondItem="RVb-Ol-uys" secondAttribute="centerY" id="oe1-6X-CVG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="showingImageView" destination="9AP-I8-xaP" id="Ggf-KY-vTJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FMx-CJ-IER"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="10A-Uh-8DT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FC2-BB-bCO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2ck-fi-2AL"/>
+                            <constraint firstItem="FC2-BB-bCO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bGI-eD-rTX"/>
+                            <constraint firstAttribute="trailing" secondItem="FC2-BB-bCO" secondAttribute="trailing" id="hwB-rq-cxw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FC2-BB-bCO" secondAttribute="bottom" id="vkz-Ey-sUy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="chatView" id="cfw-wF-uYD"/>
+                    <connections>
+                        <outlet property="tableView" destination="FC2-BB-bCO" id="0gQ-tp-y65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.79999999999995" y="49.925037481259373"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JvO-YW-fBI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SKd-Y4-Jdt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kdF-qm-sRD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RKY-qj-bLR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78k-Tc-KWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="49.925037481259373"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="haha.jpeg" width="100" height="75"/>
+    </resources>
+</document>
